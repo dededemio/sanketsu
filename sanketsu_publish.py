@@ -129,7 +129,7 @@ def run(room, config_file):
 
 if __name__ == "__main__":
     # デフォルトの部屋名と設定ファイル
-    room = ""
+    room = "リビング"
     config_file = "./config_mqtt.ini"
 
     # 引数処理
