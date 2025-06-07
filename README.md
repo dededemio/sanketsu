@@ -1,7 +1,7 @@
 # sanketsu
 
 - [アイ・オー・データ UD-CO2S](https://www.iodata.jp/product/tsushin/iot/ud-co2s/index.htm)と通信し、温度、湿度、CO2 濃度を CSV ファイルとして出力する(sanketsu.py)
-- sanketsu.py の出力の最新値を MQTT で Home Assistant 等に送信するスクリプト(sanketsu_publish.py)
+- sanketsu.py の出力の最新値を MQTT で Home Assistant 等に送信する(sanketsu_publish.py)
 
 # 動作環境
 
@@ -24,10 +24,10 @@
 ## sanketsu_publish.py
 
 - MQTT ブローカーの設定ファイル（例: `config_mqtt.ini`）を用意
-  - サンプルファイル `config_mqtt_example.ini` を参考
+  - サンプルファイル `config_mqtt_example.ini` を参考に作成
 - `python sanketsu_publish.py "<部屋名>" [configファイルパス]`を実行
   - 第一引数: 部屋名（デフォルト`リビング`）
-  - 第二引数: configファイルパス（デフォルト`./config_mqtt.ini`）
+  - 第二引数: config ファイルパス（デフォルト`./config_mqtt.ini`）
   - 例: `python sanketsu_publish.py "書斎"`
 
 # sanketsu.py の出力 CSV ファイルの仕様
@@ -44,3 +44,4 @@
 # 参考
 
 - [Raspberry Pi を使った温湿度 CO2 濃度ロガーの製作 - 白旗製作所](https://dededemio.hatenablog.jp/entry/2024/03/13/012629)
+- [Home Assistant への自作 CO2 センサの MQTT によるデータ送信 - 白旗製作所](https://dededemio.hatenablog.jp/entry/2025/05/28/194802)
